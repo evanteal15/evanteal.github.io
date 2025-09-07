@@ -30,6 +30,8 @@ function Appt() {
         setAccessToken(token);
       });
     }
+
+    // redirectToAuthCodeFlow();
   }, []);
 
   const handleLogin = () => {
@@ -37,13 +39,17 @@ function Appt() {
   };
 
   return (
-    <div className="App">
-      <h1>Spotify Playlist Generator</h1>
-      {!accessToken ? (
-        <button onClick={handleLogin}>Login with Spotify</button>
-      ) : (
-        <PlaylistCreator accessToken={accessToken} />
-      )}
+    <div>
+      <></>
+      <div className="Playlist">
+        <h1>I love all type of music</h1>
+        <h2>Come listen to my top 20 songs of the past month!</h2>
+        {!accessToken ? (
+          <button onClick={handleLogin}>Login with Spotify</button>
+        ) : (
+          <PlaylistCreator accessToken={accessToken} />
+        )}
+      </div>
     </div>
   );
 }

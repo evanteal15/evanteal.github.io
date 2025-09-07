@@ -67,6 +67,7 @@ export async function getAccessToken(code) {
     "spotify_token_expires_at",
     Date.now() + expires_in * 1000
   ); // Store expiry time
+  console.log("Access token acquired:", access_token);
   return access_token;
 }
 
@@ -100,7 +101,7 @@ export async function refreshAccessToken() {
   localStorage.setItem("spotify_refresh_token", refresh_token || refreshToken); // refresh_token might not always be returned
   localStorage.setItem(
     "spotify_token_expires_at",
-    Date.now() + expires_in * 1000
+    Date.now() + expires_in * 100000
   );
   return access_token;
 }

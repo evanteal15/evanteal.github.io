@@ -92,19 +92,18 @@ function PlaylistCreator({ accessToken }) {
 
   return (
     <div>
-      <h2>Playlist Creation</h2>
-      <button onClick={createMonthlyTopSongsPlaylist} disabled={loading}>
+      {/* <button onClick={createMonthlyTopSongsPlaylist} disabled={loading}>
         {loading ? "Creating Playlist..." : "Create My Monthly Top 20 Playlist"}
-      </button>
+      </button> */}
       {error && <p style={{ color: "red" }}>Error: {error}</p>}
-      {playlistLink && (
+      {/* {playlistLink && (
         <p>
           Playlist created!{" "}
           <a href={playlistLink} target="_blank" rel="noopener noreferrer">
             Open in Spotify
           </a>
         </p>
-      )}
+      )} */}
       <iframe
         src={
           playlistLink

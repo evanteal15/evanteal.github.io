@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
-import Appt from "./spot";
+// import App from "./toolbar";
+// import Appt from "./spot";
 import reportWebVitals from "./reportWebVitals";
+import AdvanceDemo from "./homepage";
+// import Appt from "./spot";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Appt />
+    <AdvanceDemo />
   </React.StrictMode>
 );
 
