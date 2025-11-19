@@ -96,7 +96,7 @@
     transform: translateY(-3px) scale(1.05);
 }
 
-ul {
+ul.nav-bar {
     position: fixed;
     top: 0;
     left: 0;
@@ -109,17 +109,17 @@ ul {
     z-index: 1;
 }
 
-ul li {
+ul li.nav {
     float: left;
     border-right: 1px solid #bbbbbb;
     background-color: #303030;
 }
 
-ul li:last-child {
+ul li.nav:last-child {
     border-right: none;
 }
 
-ul li a {
+ul li.nav a {
     display: block;
     color: white;
     text-align: center;
@@ -127,10 +127,10 @@ ul li a {
     text-decoration: none;
 }
 
-ul li a:hover {
+ul li.nav a:hover {
     background-color: #111111;
 }
 
-ul li a.active {
+ul li.nav a.active {
     background-color: #6b4900;
 }

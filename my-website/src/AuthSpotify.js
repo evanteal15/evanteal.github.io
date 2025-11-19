@@ -21,7 +21,7 @@ async function generateCodeChallenge(codeVerifier) {
 
 // Your Client ID and Redirect URI
 const CLIENT_ID = "9f92da863667499795e145af129c9b04";
-const REDIRECT_URI = "http://localhost:3000/callback"; // Or your deployed app's URI
+const REDIRECT_URI = "http://localhost:3000/music"; // Or your deployed app's URI
 const SCOPES =
   "user-top-read playlist-modify-public playlist-modify-private user-read-private";
 
@@ -39,7 +39,9 @@ export async function redirectToAuthCodeFlow() {
   params.append("code_challenge_method", "S256");
   params.append("code_challenge", challenge);
 
-  window.location.href = `https://accounts.spotify.com/authorize?${params.toString()}`;
+  const authUrl = new URL("https://accounts.spotify.com/authorize");
+  authUrl.search = new URLSearchParams(params).toString();
+  window.location.href = authUrl.toString();
 }
 
 export async function getAccessToken(code) {

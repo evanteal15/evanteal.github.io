@@ -5,7 +5,7 @@ import { VerticalTimelineElement } from "./VerticalTimelineElement";
 import { TabMenu } from "primereact/tabmenu";
 import "./style.min.css";
 
-export default function AdvanceDemo() {
+export default function HomePage() {
   const [displayTerminal, setDisplayTerminal] = useState(false);
 
   const items = [
@@ -17,7 +17,7 @@ export default function AdvanceDemo() {
   return (
     <>
       <div id="homepage">
-        <ul>
+        {/* <ul>
           <li>
             <a href="#home" class="active">
               Home
@@ -28,11 +28,11 @@ export default function AdvanceDemo() {
           </li>
           <li>
             <a href="#contact">Contact</a>
-          </li> */}
+          </li>
           <li styles="float:right">
             <text>Contact me at evanteal15@gmail.com</text>
           </li>
-        </ul>
+        </ul> */}
         <div className="sec1">
           <div id="leftSection">
             <img alt="My Headshot" id="headshot" src="/headshot.jpg" />

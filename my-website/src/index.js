@@ -5,12 +5,13 @@ import "./index.css";
 // import Appt from "./spot";
 import reportWebVitals from "./reportWebVitals";
 import AdvanceDemo from "./homepage";
+import App from "./App";
 // import Appt from "./spot";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AdvanceDemo />
+    <App />
   </React.StrictMode>
 );
 
